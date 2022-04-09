@@ -1,0 +1,47 @@
+.sectionBase {
+  padding: var(--spV) 0;
+}
+
+.basicGrid {
+  display: grid;
+  grid-template-columns: repeat(var(--columnCount), 1fr);
+  grid-gap: var(--columnGap);
+}
+.basicGrid.count5 {
+  content: "";
+}
+
+.basicGrid.count4 {
+  > *:nth-child(5) {
+    display: none;
+  }
+}
+.basicGrid.count3 {
+  > *:nth-child(5),
+  > *:nth-child(4) {
+    display: none;
+  }
+}
+.basicGrid.count2 {
+  > *:nth-child(5),
+  > *:nth-child(4),
+  > *:nth-child(3) {
+    display: none;
+  }
+}
+
+.infoGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: calc(var(--columnGap) * 2);
+  &.compact {
+    grid-template-columns: 1fr;
+    grid-gap: var(--columnGap);
+    > *:nth-child(4) {
+      display: none;
+    }
+  }
+  &.full {
+    content: "";
+  }
+}

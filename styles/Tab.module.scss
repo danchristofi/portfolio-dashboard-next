@@ -1,0 +1,19 @@
+@import './css/window-breakpoints';
+@import './css/mixins';
+
+.tab {
+  width: toRem(50);
+  aspect-ratio: 1/1;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: cl("grey4");
+  &.accent {
+    background: cl("accent");
+    color: #fff;
+  }
+  &.sm {
+    width: toRem(40);
+  }
+}

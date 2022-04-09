@@ -1,0 +1,60 @@
+@import './css/window-breakpoints';
+@import './css/mixins';
+
+.sidebar {
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 2rem;
+  display: flex;
+
+  &.heightAuto {
+    height: auto !important;
+    max-height: 100%;
+  }
+
+  &.widthAuto {
+    width: auto !important;
+  }
+
+  > * {
+    flex-grow: 1;
+  }
+
+  &.lg {
+    width: toRem(1000);
+    @include screen($screenMd) {
+      width: 100%;
+      padding: 1rem;
+    }
+  }
+
+  &.md {
+    width: toRem(500);
+    @include screen($screenMd) {
+      width: 100%;
+      padding: 1rem;
+    }
+  }
+}
+
+.closeButton {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1.3rem;
+}
+
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  background: rgba(var(--grey3), 0.8);
+  cursor: pointer;
+}

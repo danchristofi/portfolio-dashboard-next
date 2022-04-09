@@ -1,0 +1,27 @@
+.sectionTitle {
+  font-size: var(--textXxl);
+  font-weight: 500;
+  flex-shrink: 0;
+  padding-bottom: 1.5em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  &.hasBorder {
+    padding-bottom: 0.65em;
+    margin-bottom: 0.85em;
+    border-bottom: 1px solid var(--bgContrastDefault);
+  }
+  h2 {
+    display: flex;
+    align-items: center;
+    svg {
+      margin-right: 0.4em;
+      opacity: 0.5;
+    }
+  }
+
+  &.sm {
+    font-size: var(--textLg);
+    padding-bottom: 1em;
+  }
+}

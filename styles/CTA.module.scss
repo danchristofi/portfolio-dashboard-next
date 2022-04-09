@@ -1,0 +1,20 @@
+.cta {
+  .ctaContent {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .ctaBody {
+    margin-right: var(--sp10);
+    flex-grow: 1;
+  }
+
+  &.sm {
+    .ctaContent {
+      flex-direction: column;
+    }
+    .ctaBody {
+      margin-bottom: var(--sp10);
+    }
+  }
+}

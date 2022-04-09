@@ -1,0 +1,97 @@
+@import "./css/mixins";
+
+.btn {
+  font-weight: normal;
+  padding: 0.6em 2em;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  &.default {
+    color: currentColor;
+    background: var(--bgContrastFaded);
+    &:hover {
+      background: var(--bgContrastDefault);
+    }
+    &:active {
+      background: var(--bgContrastSolid);
+      transition: background-color 0s;
+    }
+  }
+
+  &.ghost {
+    color: currentColor;
+    &:hover {
+      background: var(--bgContrastFaded);
+    }
+  }
+
+  &.light {
+    color: rgba(var(--grey3), 1);
+    background: rgba(var(--white), 1);
+    box-shadow: 0 1rem 2rem -1rem rgba(white, 0.5);
+  }
+
+  &.lightAccent {
+    color: rgba(var(--accent), 1);
+    background: rgba(var(--white), 1);
+    box-shadow: 0 1rem 2rem -1rem rgba(white, 0.5);
+    &:hover {
+      background: rgba(var(--white), 0.8);
+    }
+  }
+
+  &.accentLight {
+    background: rgba(var(--accent), 1);
+    color: rgba(var(--white), 1);
+    box-shadow: 0 1rem 2rem -1rem cl("accent", 0.5);
+  }
+
+  &.accentDark {
+    background: rgba(var(--accent), 1);
+    color: rgba(var(--grey2), 1);
+    font-weight: bolder;
+  }
+
+  &.accentMatch {
+    background: rgba(var(--accent), 1);
+    color: rgba(var(--contrastMatch), 1);
+    box-shadow: 0 1rem 2rem -1rem rgba(var(--accent), 0.5);
+  }
+
+  &.contrastSolid {
+    background: rgba(var(--grey2), 1);
+    color: rgba(var(--grey9), 1);
+    @include gDark() {
+      background: rgba(var(--white), 1);
+      color: rgba(var(--grey3), 1);
+    }
+  }
+
+  &.md {
+    font-size: toRem(15);
+  }
+
+  &.sm {
+    font-size: toRem(12);
+  }
+
+  &.lg {
+    font-size: toRem(18);
+    font-weight: 500;
+    padding: 0.8em 2em;
+  }
+
+  &.block {
+    width: 100%;
+  }
+
+  svg {
+    margin-right: 0.5em;
+    margin-left: -0.5em;
+  }
+}

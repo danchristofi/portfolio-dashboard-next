@@ -1,0 +1,31 @@
+@import "./css/window-breakpoints";
+@import "./css/mixins";
+
+.pill {
+  border-radius: 999px;
+  font-weight: normal;
+
+  &.contrast {
+    background: cl("grey1");
+    color: cl("grey10");
+    @include gDark() {
+      background: cl("grey10");
+      color: cl("grey1");
+    }
+  }
+
+  &.default {
+    color: currentColor;
+    background: var(--bgContrastDefault);
+  }
+
+  &.md {
+    padding: 0.3em 1.3em;
+    font-size: var(--textBodySm);
+  }
+
+  &.sm {
+    padding: 0.5em 1.3em;
+    font-size: var(--textSm);
+  }
+}

@@ -1,0 +1,21 @@
+@import "./css/window-breakpoints";
+@import "./css/mixins";
+
+.container {
+  width: 100%;
+}
+
+.inner {
+  --x: calc(var(--columnWidth) * var(--columnCount));
+  --y: calc(var(--x) + (var(--columnCount) * var(--columnGap)));
+  --z: calc(var(--y) - var(--columnGap));
+  width: var(--z);
+  margin: 0 auto;
+}
+
+.alt {
+  background: cl("grey10");
+  @include gDark() {
+    background: cl("grey2", 0.2);
+  }
+}

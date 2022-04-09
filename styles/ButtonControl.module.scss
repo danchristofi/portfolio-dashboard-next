@@ -1,0 +1,34 @@
+@import "./css/window-breakpoints";
+@import "./css/mixins";
+
+.btnControl {
+  font-weight: normal;
+  padding: 0.6em;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  flex-shrink: 0;
+  display: inline-flex;
+  justify-content: center;
+  aspect-ratio: 1/1;
+
+  &.default {
+    color: currentColor;
+    background: var(--bgContrastFaded);
+    &:hover {
+      background: var(--bgContrastDefault);
+    }
+    &:active {
+      background: var(--bgContrastSolid);
+      transition: background-color 0s;
+    }
+  }
+
+  &.accentMatch {
+    background: cl("accent");
+    color: cl("contrastMatch");
+    font-weight: bolder;
+    &:hover {
+    }
+  }
+}

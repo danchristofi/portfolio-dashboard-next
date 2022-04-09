@@ -1,0 +1,39 @@
+.sectionCard {
+  background: var(--bgContrastFaded);
+  margin-bottom: var(--sp3);
+  border-radius: var(--rad);
+  display: flex;
+  flex-grow: 0;
+  overflow: hidden;
+  //-webkit-user-drag: element;
+
+  .inner {
+    padding: 0.7rem 1rem 0.7rem 1.6rem;
+    display: flex;
+    align-items: center;
+    font-size: var(--textBodySm);
+    width: 100%;
+  }
+
+  .handle {
+    background: rgba(var(--accent), 1);
+    width: 2.5rem;
+    cursor: grab;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    svg {
+      fill: rgba(var(--contrastMatch), 1);
+    }
+
+    &:active {
+      cursor: grabbing;
+    }
+
+    + * {
+      margin-left: -0.3rem;
+    }
+  }
+}
