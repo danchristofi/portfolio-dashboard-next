@@ -4,6 +4,7 @@ import styles from "../../styles/Panel.module.scss";
 type Props = {
   size?: "sm" | "md" | "lg" | "xl";
   bg?: "faded" | "default" | "solid" | "match" | "accent";
+  shadow?: boolean;
   innerClasses?: string;
   className?: string;
   footerContent?: any;
@@ -14,6 +15,7 @@ type Props = {
 const Panel = ({
   size = "md",
   bg = "default",
+  shadow = false,
   innerClasses = "",
   className = "",
   footerContent,
@@ -23,7 +25,7 @@ const Panel = ({
   return (
     <div
       style={style}
-      className={`${styles.panel} ${styles[size]} bg-contrast bg-contrast--${bg} ${className}`}
+      className={`${styles.panel} ${styles[size]} bg-contrast bg-contrast--${bg} ${shadow ? styles.shadow : ''} ${className}`}
     >
       <div className={`${styles.inner} ${innerClasses}`}>{children}</div>
 

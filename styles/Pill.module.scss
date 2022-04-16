@@ -4,28 +4,29 @@
 .pill {
   border-radius: 999px;
   font-weight: normal;
+}
 
-  &.contrast {
-    background: cl("grey1");
-    color: cl("grey10");
-    @include gDark() {
-      background: cl("grey10");
-      color: cl("grey1");
-    }
-  }
+.contrast {
+  background: cl("grey1");
+  color: cl("grey10");
 
-  &.default {
-    color: currentColor;
-    background: var(--bgContrastDefault);
+  @include gDark() {
+    background: cl("grey10");
+    color: cl("grey1");
   }
+}
 
-  &.md {
-    padding: 0.3em 1.3em;
-    font-size: var(--textBodySm);
-  }
+.default {
+  color: currentColor;
+  background: var(--bgContrastDefault);
+}
 
-  &.sm {
-    padding: 0.5em 1.3em;
-    font-size: var(--textSm);
-  }
+.md {
+  padding: 0.3em 1.3em;
+  font-size: var(--textBodySm);
+}
+
+.sm {
+  padding: 0.5em 1.3em;
+  font-size: var(--textSm);
 }

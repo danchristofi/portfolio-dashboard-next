@@ -86,7 +86,7 @@ export const MyActivity = () => {
 
       <Panel
         bg={"match"}
-        style={{ boxShadow: "0 3rem 3rem -1.5rem rgba(0, 0, 0, 0.1)" }}
+        shadow
         innerClasses={"flex jcc"}
         className={cbp < bps.lg ? "w-100 mt-10" : "w-1/3"}
       >

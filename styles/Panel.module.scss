@@ -15,6 +15,7 @@
   padding: var(--py) var(--px);
   overflow-x: hidden;
   overflow-y: auto;
+
   &::-webkit-scrollbar {
     width: 0.2rem;
   }
@@ -50,4 +51,8 @@
 .lg {
   --py: 2.6rem;
   --px: 2.8rem;
+}
+
+.shadow {
+  box-shadow: 0 3rem 3rem -1.5rem rgba(black, 0.1);
 }

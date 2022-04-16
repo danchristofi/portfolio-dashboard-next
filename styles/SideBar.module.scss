@@ -26,6 +26,7 @@
 
   &.lg {
     width: toRem(1000);
+
     @include screen($screenMd) {
       width: 100%;
       padding: 1rem;
@@ -34,6 +35,7 @@
 
   &.md {
     width: toRem(500);
+
     @include screen($screenMd) {
       width: 100%;
       padding: 1rem;
